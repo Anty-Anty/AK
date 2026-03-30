@@ -7,28 +7,32 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  padding: 12px;
-  border: 1px solid #000;
-  width: 100vh;
-  max-width: 560px;
+  border: 1px dashed red;
+  gap: 10px;
+  width: 90%;
   margin: 0 auto;
 }
 
 .section {
-  border: 1px solid #000;
+  border: 1px dashed #000;
+  /* padding: 10px; */
+}
+
+/* Header section */
+.header {
+  height: 130px;
+}
+
+.row {
+  display: flex;
+  height: 100%;
+  gap: 10px;
   padding: 10px;
 }
 
-/* Section 1 — two columns */
-.row {
-  display: flex;
-  gap: 10px;
-}
-
 .col {
-  border: 1px solid #000;
-  height: 120px;
+  border: 1px dashed #000;
+  height: 100%;
 }
 
 .col-left {
@@ -38,24 +42,30 @@
   flex: 1;
 }
 
-/* Section 2 — plain full-width block */
-.section-2 {
+/* Tech Stack section */
+.tech-stack {
   height: 130px;
 }
 
-/* Section 3 — three stacked inner divs */
-.section-3 {
+/* App gallery section */
+.app-gallery {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.inner {
-  border: 1px solid #000;
+.app-gallery-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.app-gallery-inner {
+  border: 1px dashed #000;
   height: 110px;
 }
 
-/* Section 4 — plain full-width block */
-.section-4 {
+/* Education section */
+.education {
   height: 130px;
 }
