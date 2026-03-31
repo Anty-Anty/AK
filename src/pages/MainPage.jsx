@@ -7,12 +7,12 @@ const MainPage = () => {
   const [showAllApps, setShowAllApps] = useState(false);
 
   const apps = [
-    { id: "1", title: "WaterPleaseApp»", description: "WaterPleaseApp»" },
-    { id: "2", title: "ToDoApp»", description: "ToDoApp»" },
-    { id: "3", title: "Delmaket»", description: "Delmaket»" },
+    { id: "1", title: "WaterPleaseApp»", description: "WaterPleaseApp" },
+    { id: "2", title: "ToDoApp»", description: "ToDoApp" },
+    { id: "3", title: "Delmaket»", description: "Delmaket" },
     { id: "4", title: "app4", description: "app" },
-    { id: "5", title: "app5", description: "app»" },
-    { id: "6", title: "app6", description: "app»" },
+    { id: "5", title: "app5", description: "app" },
+    { id: "6", title: "app6", description: "app" },
   ];
 
   return (
@@ -26,7 +26,55 @@ const MainPage = () => {
       </div>
 
       {/* TECh STACK */}
-      <div class="section tech-stack"></div>
+      <div class="section tech-stack">
+        <h3>
+          <span className="white">Technical Skills</span>
+        </h3>
+        <p>
+          Languages & Tools:
+          <br />
+          <strong>
+            <span className="white">
+              JavaScript (ES6+), TypeScript, HTML5, CSS3
+            </span>
+          </strong>
+          <br />
+          Frameworks / Libraries:
+          <br />
+          <strong>
+            <span className="white">React, React Router, Vite </span>
+          </strong>
+          <br />
+          State Management:
+          <br />
+          <strong>
+            <span className="white">React Hooks, Context API</span>
+          </strong>
+          <br />
+          Backend Exposure:
+          <br />
+          <strong>
+            <span className="white">REST APIs, Node.js/Express, MongoDB</span>
+          </strong>
+          <br />
+          UI Patterns:
+          <br />
+          <strong>
+            <span className="white">
+              Component composition, forms, modals, drag & drop, dynamic state
+              syncing
+            </span>
+          </strong>
+          <br />
+          Other:
+          <br />
+          <strong>
+            <span className="white">
+              Git/GitHub, responsive design, performance optimization
+            </span>
+          </strong>
+        </p>
+      </div>
 
       {/* GALLERY */}
       <div class="section app-gallery">

@@ -7,15 +7,31 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  border: 1px dashed red;
+  border: 1px dashed rgba(255, 0, 0, 0.336);
   gap: 10px;
   width: 90%;
   margin: 0 auto;
 }
 
 .section {
-  border: 1px dashed #000;
+  border: 1px dashed #4d4d4d;
   /* padding: 10px; */
+}
+
+.white {
+  color: #ffffffc7;
+}
+.red {
+  color: #e8476a;
+}
+.yellow {
+  color: #f5e12a;
+}
+.green {
+  color: #3fc42ac7;
+}
+.blue {
+  color: #2a6ef5;
 }
 
 /* Header section */
@@ -27,11 +43,10 @@
   display: flex;
   height: 100%;
   gap: 10px;
-  padding: 10px;
 }
 
 .col {
-  border: 1px dashed #000;
+  border: 1px dashed #4d4d4d;
   height: 100%;
 }
 
@@ -44,7 +59,11 @@
 
 /* Tech Stack section */
 .tech-stack {
-  height: 130px;
+  height: auto;
+}
+
+.tech-stack p {
+  line-height: 1.5;
 }
 
 /* App gallery section */
@@ -61,7 +80,7 @@
 }
 
 .app-gallery-inner {
-  border: 1px dashed #000;
+  border: 1px dashed #4d4d4d;
   height: 110px;
 }
 
