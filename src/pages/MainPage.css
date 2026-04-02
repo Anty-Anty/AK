@@ -7,19 +7,20 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  border: 1px dashed rgba(255, 0, 0, 0.336);
-  gap: 10px;
+  /* border: 1px dashed rgba(255, 0, 0, 0.336); */
+  gap: 20px;
   width: 90%;
   margin: 0 auto;
 }
 
 .section {
   border: 1px dashed #4d4d4d;
+  border-radius: 10px;
   /* padding: 10px; */
 }
 
 .white {
-  color: #ffffffc7;
+  color: #ffffffe5;
 }
 .red {
   color: #e8476a;
@@ -36,17 +37,18 @@
 
 /* Header section */
 .header {
-  height: 130px;
+  margin-top: 20px;
+  height: auto;
+  padding: 10px;
 }
 
 .row {
   display: flex;
   height: 100%;
-  gap: 10px;
+  gap: 20px;
 }
 
 .col {
-  border: 1px dashed #4d4d4d;
   height: 100%;
 }
 
@@ -57,8 +59,26 @@
   flex: 1;
 }
 
+.button-contacts {
+  border-radius: 12px;
+  font-weight: 400;
+  padding: 0.1em 0.5em;
+  margin: 0.1em 0em 0.1em 0em;
+}
+
+.button-contacts:hover {
+  border-color: #bbbbbb;
+  background-color: #bbbbbb;
+}
+
+.button-contacts:focus,
+.button-contacts:focus-visible {
+  outline: none;
+}
+
 /* Tech Stack section */
 .tech-stack {
+  padding: 10px;
   height: auto;
 }
 
@@ -68,6 +88,7 @@
 
 /* App gallery section */
 .app-gallery {
+  padding: 10px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -80,11 +101,71 @@
 }
 
 .app-gallery-inner {
+  display: flex;
   border: 1px dashed #4d4d4d;
-  height: 110px;
+  padding: 10px;
+  gap: 10px;
+}
+
+.app-gallery-inner-block1 {
+  display: flex;
+  flex: 2;
+  gap: 5px;
+}
+
+.app-gallery-inner-block2 {
+  display: flex;
+  flex: 3;
+  gap: 5px;
+  min-height: 100px;
+}
+
+.app-gallery-inner-title {
+  display: flex;
+  /* align-items: center; */
+  flex: 2;
+}
+
+.app-gallery-inner-discription {
+  flex: 3;
+}
+
+.app-gallery-inner-frontend {
+  flex: 1;
+}
+
+.app-gallery-inner-backend {
+  flex: 1;
+}
+
+.app-gallery-inner-image {
+  flex: 1;
 }
 
 /* Education section */
 .education {
+  padding: 10px;
   height: 130px;
+}
+
+.line_red {
+  background-color: #e8476a;
+}
+
+.line_yellow {
+  background-color: #f5e12a;
+}
+
+.line_green {
+  background-color: #3fc42ac7;
+}
+
+.line_blue {
+  background-color: #2a6ef5;
+}
+
+@media (max-width: 950px) {
+  .app-gallery-inner {
+    flex-direction: column;
+  }
 }

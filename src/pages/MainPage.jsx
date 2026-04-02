@@ -7,26 +7,100 @@ const MainPage = () => {
   const [showAllApps, setShowAllApps] = useState(false);
 
   const apps = [
-    { id: "1", title: "WaterPleaseApp»", description: "WaterPleaseApp" },
-    { id: "2", title: "ToDoApp»", description: "ToDoApp" },
-    { id: "3", title: "Delmaket»", description: "Delmaket" },
-    { id: "4", title: "app4", description: "app" },
-    { id: "5", title: "app5", description: "app" },
-    { id: "6", title: "app6", description: "app" },
+    {
+      id: "1",
+      title: "WaterPleaseApp",
+      frontend: "frontend",
+      backend: "backend",
+      description:
+        "A full-stack web application for managing indoor plants, visualizing their placement on a grid map, and tracking watering schedules.",
+    },
+    {
+      id: "2",
+      title: "ToDoApp",
+      frontend: "React",
+      backend: "Node.js + Express + MongoDB",
+      description:
+        "A full-stack web application for managing personal tasks, featuring user authentication, protected routes, and persistent data storage.",
+    },
+    {
+      id: "3",
+      title: "Delmaket",
+      frontend: "frontend",
+      backend: "backend",
+      description:
+        "A clean, minimal portfolio website built for an architectural model studio.",
+    },
+    {
+      id: "4",
+      title: "app4",
+      frontend: "frontend",
+      backend: "backend",
+      description: "app",
+    },
+    {
+      id: "5",
+      title: "app5",
+      frontend: "frontend",
+      backend: "backend",
+      description: "app",
+    },
+    {
+      id: "6",
+      title: "app6",
+      frontend: "frontend",
+      backend: "backend",
+      description: "app",
+    },
   ];
 
   return (
     <div class="wrapper">
       {/* HEADER */}
       <div class="section header">
+        {/* <div className="line_red"></div> */}
+        {/* <hr className="line_red" /> */}
         <div class="row">
-          <div class="col col-left"></div>
-          <div class="col col-right"></div>
+          <div class="col col-left">
+            <h3>
+              <span className="white">Hi, I'm Voo</span>
+            </h3>
+            <p>
+              Frontend Engineer with background in ....
+              <br />I love building full-stack apps in React.
+            </p>
+          </div>
+          <div class="col col-right">
+            <h3>
+              <span className="white">Contacts</span>
+            </h3>
+            +1 xxx xxx xx xx
+            <br />
+            xxxxx.xxx@gmail.com
+            <br />
+            <a
+              href="https://github.com/Anty-Anty"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <button className="button-contacts">GitHub link</button>
+            </a>
+            <br />
+            <a
+              href="https://linkedin.com/in/ant-kot"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <button className="button-contacts">LinkedIn link</button>
+            </a>
+          </div>
         </div>
       </div>
 
-      {/* TECh STACK */}
+      {/* TECH STACK */}
       <div class="section tech-stack">
+        {/* <div className="line_yellow"></div> */}
+        {/* <hr className="line_yellow" /> */}
         <h3>
           <span className="white">Technical Skills</span>
         </h3>
@@ -78,12 +152,36 @@ const MainPage = () => {
 
       {/* GALLERY */}
       <div class="section app-gallery">
+        {/* <div className="line_blue"></div> */}
+        {/* <hr className="line_blue" /> */}
         <h3>Apps</h3>
 
-        <div class="section app-gallery-stack">
+        <div class="app-gallery-stack">
           {(showAllApps ? apps : apps.slice(0, 3)).map((app) => (
-            <div key={app.id} class="app-gallery-inner">
-              <p onClick={() => setModalImage(app.title)}>{app.description}</p>
+            <div
+              key={app.id}
+              class="app-gallery-inner"
+              onClick={() => setModalImage(app.title)}
+            >
+              <div className="app-gallery-inner-block1">
+                <div className="section app-gallery-inner-title">
+                  <h4>{app.title}</h4>
+                </div>
+                <div className="section app-gallery-inner-discription">
+                  <p>{app.description}</p>
+                </div>
+              </div>
+              <div className="app-gallery-inner-block2">
+                <div className="section app-gallery-inner-image">image</div>
+                <div className="section app-gallery-inner-frontend">
+                  Frontend:
+                  <br /> {app.frontend}
+                </div>
+                <div className="section app-gallery-inner-backend">
+                  Backend: <br />
+                  {app.backend}
+                </div>
+              </div>
             </div>
           ))}
         </div>
@@ -95,12 +193,15 @@ const MainPage = () => {
             });
           }}
         >
-          {showAllApps ? "Show all apps" : "Show less"}
+          {showAllApps ? "Show less" : "Show all apps"}
         </button>
       </div>
 
       {/* EDUCATION */}
-      <div class="section education"></div>
+      <div class="section education">
+        {/* <div className="line_green"></div> */}
+        {/* <hr className="line_green" /> */}
+      </div>
     </div>
   );
 };
