@@ -19,6 +19,13 @@
   /* padding: 10px; */
 }
 
+.section_2 {
+  /* background-color: #1b1b1b; */
+  border: 1px dashed #333333;
+  border-radius: 10px;
+  /* padding: 10px; */
+}
+
 .white {
   color: #ffffffe5;
 }
@@ -102,7 +109,9 @@
 
 .app-gallery-inner {
   display: flex;
-  border: 1px dashed #4d4d4d;
+  background-color: #1b1b1b;
+  border-radius: 15px;
+  /* border: 1px dashed #4d4d4d; */
   padding: 10px;
   gap: 10px;
 }
@@ -110,36 +119,46 @@
 .app-gallery-inner-block1 {
   display: flex;
   flex: 2;
-  gap: 5px;
+  gap: 10px;
 }
 
 .app-gallery-inner-block2 {
   display: flex;
   flex: 3;
-  gap: 5px;
+  gap: 10px;
   min-height: 100px;
 }
 
 .app-gallery-inner-title {
   display: flex;
+  padding: 10px;
   /* align-items: center; */
   flex: 2;
 }
 
 .app-gallery-inner-discription {
+  padding: 10px;
   flex: 3;
 }
 
 .app-gallery-inner-frontend {
   flex: 1;
+  padding: 10px;
 }
 
 .app-gallery-inner-backend {
+  padding: 10px;
   flex: 1;
 }
 
 .app-gallery-inner-image {
+  padding: 10px;
   flex: 1;
+}
+.app-gallery-inner-image img {
+  flex: 1;
+  border-radius: 10px;
+  height: 100px;
 }
 
 /* Education section */

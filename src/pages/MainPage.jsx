@@ -10,11 +10,12 @@ const MainPage = () => {
     {
       id: "1",
       title: "WaterPleaseApp",
-      frontend: "frontend",
-      backend: "backend",
+      frontend: "React + TypeScript",
+      backend: "Node.js + Express + MongoDB",
       description:
         "A full-stack web application for managing indoor plants, visualizing their placement on a grid map, and tracking watering schedules.",
-    },
+    img:"WaterPleaseApp"
+      },
     {
       id: "2",
       title: "ToDoApp",
@@ -22,14 +23,16 @@ const MainPage = () => {
       backend: "Node.js + Express + MongoDB",
       description:
         "A full-stack web application for managing personal tasks, featuring user authentication, protected routes, and persistent data storage.",
+      img: "ToDoApp"
     },
     {
       id: "3",
       title: "Delmaket",
-      frontend: "frontend",
-      backend: "backend",
+      frontend: "React",
+      backend: "",
       description:
         "A clean, minimal portfolio website built for an architectural model studio.",
+      img: "Delmaket"
     },
     {
       id: "4",
@@ -37,6 +40,7 @@ const MainPage = () => {
       frontend: "frontend",
       backend: "backend",
       description: "app",
+      img: "image"
     },
     {
       id: "5",
@@ -44,6 +48,7 @@ const MainPage = () => {
       frontend: "frontend",
       backend: "backend",
       description: "app",
+      img: "image"
     },
     {
       id: "6",
@@ -51,6 +56,7 @@ const MainPage = () => {
       frontend: "frontend",
       backend: "backend",
       description: "app",
+      img: "image"
     },
   ];
 
@@ -164,21 +170,29 @@ const MainPage = () => {
               onClick={() => setModalImage(app.title)}
             >
               <div className="app-gallery-inner-block1">
-                <div className="section app-gallery-inner-title">
+                <div className="section_2 app-gallery-inner-title">
                   <h4>{app.title}</h4>
                 </div>
-                <div className="section app-gallery-inner-discription">
+                <div className="section_2 app-gallery-inner-discription">
                   <p>{app.description}</p>
                 </div>
               </div>
               <div className="app-gallery-inner-block2">
-                <div className="section app-gallery-inner-image">image</div>
-                <div className="section app-gallery-inner-frontend">
+                <div className="section_2 app-gallery-inner-image">
+                  <img
+                    src={`${import.meta.env.BASE_URL}screenshots/${app.img}.webp`}
+                    alt={app.img}
+                    // loading="lazy"
+                    // onClick={() => setModalImage(work.title)}
+                    // className="app-gallery-img"
+                  />
+                </div>
+                <div className="section_2 app-gallery-inner-frontend">
                   Frontend:
                   <br /> {app.frontend}
                 </div>
-                <div className="section app-gallery-inner-backend">
-                  Backend: <br />
+                <div className="section_2 app-gallery-inner-backend">
+                  {app.backend ? "Backend:" : null} <br />
                   {app.backend}
                 </div>
               </div>
