@@ -188,13 +188,9 @@ const MainPage = () => {
                     <a href={app.appLink} target="_blank" rel="noreferrer">
                       <button className="button-app">View App</button>
                     </a>
-                    <a
-                      href="https://github.com/Anty-Anty"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <button className="button-app">More info</button>
-                    </a>
+
+                    <button className="button-app">More info</button>
+
                   </div>
                 </div>
                 <div className="section-light app-gallery-inner-discription">
@@ -204,13 +200,12 @@ const MainPage = () => {
               <div className="app-gallery-inner-block2">
                 <div className="app-gallery-inner-image">
                   <img
-                    src={`${import.meta.env.BASE_URL}screenshots/${
-                      app.img
-                    }.webp`}
+                    src={`${import.meta.env.BASE_URL}screenshots/${app.img
+                      }.webp`}
                     alt={app.img}
-                    // loading="lazy"
-                    // onClick={() => setModalImage(work.title)}
-                    // className="app-gallery-img"
+                  // loading="lazy"
+                  // onClick={() => setModalImage(work.title)}
+                  // className="app-gallery-img"
                   />
                 </div>
                 <div className="section-light app-gallery-inner-frontend">
