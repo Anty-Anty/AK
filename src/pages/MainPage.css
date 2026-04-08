@@ -19,7 +19,7 @@
   /* padding: 10px; */
 }
 
-.section_2 {
+.section-light {
   /* background-color: #1b1b1b; */
   border: 1px dashed #333333;
   border-radius: 10px;
@@ -67,20 +67,27 @@
 }
 
 .button-contacts {
-  border-radius: 12px;
+  border-radius: 30px;
   font-weight: 400;
-  padding: 0.1em 0.5em;
+  padding: 0.2em 0.5em;
   margin: 0.1em 0em 0.1em 0em;
 }
 
-.button-contacts:hover {
-  border-color: #bbbbbb;
-  background-color: #bbbbbb;
+.button-app {
+  font-size: 0.9em;
+  background-color: #252525;
+  border: 1px solid;
+  border-color: #303030;
+  color: rgb(180, 180, 180);
+  padding: 0.2em 0.5em;
+  /* margin: 5px 0 5px 0; */
+  font-weight: 400;
+  margin-top: 10px;
+  width: 100%;
 }
 
-.button-contacts:focus,
-.button-contacts:focus-visible {
-  outline: none;
+.button-app:hover {
+  background-color: #636363;
 }
 
 /* Tech Stack section */
@@ -131,6 +138,8 @@
 
 .app-gallery-inner-title {
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 10px;
   /* align-items: center; */
   flex: 2;
@@ -143,22 +152,29 @@
 
 .app-gallery-inner-frontend {
   flex: 1;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   padding: 10px;
 }
 
 .app-gallery-inner-backend {
+  display: flex;
+  justify-content: space-between;
   padding: 10px;
+  flex-direction: column;
   flex: 1;
 }
 
 .app-gallery-inner-image {
-  padding: 10px;
   flex: 1;
 }
 .app-gallery-inner-image img {
-  flex: 1;
+  width: 100%;
+  height: 100%;
+  object-position: left;
+  object-fit: cover;
   border-radius: 10px;
-  height: 100px;
 }
 
 /* Education section */

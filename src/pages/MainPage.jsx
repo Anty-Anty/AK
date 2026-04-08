@@ -14,8 +14,11 @@ const MainPage = () => {
       backend: "Node.js + Express + MongoDB",
       description:
         "A full-stack web application for managing indoor plants, visualizing their placement on a grid map, and tracking watering schedules.",
-    img:"WaterPleaseApp"
-      },
+      img: "WaterPleaseApp",
+      appLink: "https://waterpleaseapp.netlify.app",
+      frontRepo: "https://github.com/Anty-Anty/WaterPleaseApp",
+      backRepo: "https://github.com/Anty-Anty/WaterPleaseApp-backend",
+    },
     {
       id: "2",
       title: "ToDoApp",
@@ -23,7 +26,10 @@ const MainPage = () => {
       backend: "Node.js + Express + MongoDB",
       description:
         "A full-stack web application for managing personal tasks, featuring user authentication, protected routes, and persistent data storage.",
-      img: "ToDoApp"
+      img: "ToDoApp",
+      appLink: "https://todoappoo.netlify.app/",
+      frontRepo: "https://github.com/Anty-Anty/ToDoApp",
+      backRepo: "https://github.com/Anty-Anty/ToDoApp-backend",
     },
     {
       id: "3",
@@ -32,7 +38,9 @@ const MainPage = () => {
       backend: "",
       description:
         "A clean, minimal portfolio website built for an architectural model studio.",
-      img: "Delmaket"
+      img: "Delmaket",
+      appLink: "https://anty-anty.github.io/delmaket/#/en",
+      frontRepo: "https://github.com/Anty-Anty/delmaket",
     },
     {
       id: "4",
@@ -40,7 +48,7 @@ const MainPage = () => {
       frontend: "frontend",
       backend: "backend",
       description: "app",
-      img: "image"
+      img: "image",
     },
     {
       id: "5",
@@ -48,7 +56,7 @@ const MainPage = () => {
       frontend: "frontend",
       backend: "backend",
       description: "app",
-      img: "image"
+      img: "image",
     },
     {
       id: "6",
@@ -56,7 +64,7 @@ const MainPage = () => {
       frontend: "frontend",
       backend: "backend",
       description: "app",
-      img: "image"
+      img: "image",
     },
   ];
 
@@ -170,30 +178,62 @@ const MainPage = () => {
               onClick={() => setModalImage(app.title)}
             >
               <div className="app-gallery-inner-block1">
-                <div className="section_2 app-gallery-inner-title">
-                  <h4>{app.title}</h4>
+                <div className="section-light app-gallery-inner-title">
+                  <div>
+                    <h4>
+                      <span className="white">{app.title}</span>
+                    </h4>
+                  </div>
+                  <div>
+                    <a href={app.appLink} target="_blank" rel="noreferrer">
+                      <button className="button-app">View App</button>
+                    </a>
+                    <a
+                      href="https://github.com/Anty-Anty"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <button className="button-app">More info</button>
+                    </a>
+                  </div>
                 </div>
-                <div className="section_2 app-gallery-inner-discription">
+                <div className="section-light app-gallery-inner-discription">
                   <p>{app.description}</p>
                 </div>
               </div>
               <div className="app-gallery-inner-block2">
-                <div className="section_2 app-gallery-inner-image">
+                <div className="app-gallery-inner-image">
                   <img
-                    src={`${import.meta.env.BASE_URL}screenshots/${app.img}.webp`}
+                    src={`${import.meta.env.BASE_URL}screenshots/${
+                      app.img
+                    }.webp`}
                     alt={app.img}
                     // loading="lazy"
                     // onClick={() => setModalImage(work.title)}
                     // className="app-gallery-img"
                   />
                 </div>
-                <div className="section_2 app-gallery-inner-frontend">
-                  Frontend:
-                  <br /> {app.frontend}
+                <div className="section-light app-gallery-inner-frontend">
+                  <p>
+                    Frontend:
+                    <br /> {app.frontend}
+                  </p>
+                  <a href={app.frontRepo} target="_blank" rel="noreferrer">
+                    <button className="button-app">View repo</button>
+                  </a>
                 </div>
-                <div className="section_2 app-gallery-inner-backend">
-                  {app.backend ? "Backend:" : null} <br />
-                  {app.backend}
+                <div className="section-light app-gallery-inner-backend">
+                  {app.backend ? (
+                    <>
+                      <p>
+                        Backend: <br />
+                        {app.backend}
+                      </p>
+                      <a href={app.backRepo} target="_blank" rel="noreferrer">
+                        <button className="button-app">View repo</button>
+                      </a>
+                    </>
+                  ) : null}
                 </div>
               </div>
             </div>
