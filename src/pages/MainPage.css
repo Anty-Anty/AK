@@ -203,4 +203,9 @@
   .app-gallery-inner {
     flex-direction: column;
   }
+
+  .app-gallery-inner-image img {
+    max-height: 250px;
+    height: 100%;
+  }
 }
