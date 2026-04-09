@@ -15,6 +15,7 @@ const MainPage = () => {
       description:
         "A full-stack web application for managing indoor plants, visualizing their placement on a grid map, and tracking watering schedules.",
       img: "WaterPleaseApp",
+      imgSmall: "WaterPleaseApp_small",
       appLink: "https://waterpleaseapp.netlify.app",
       frontRepo: "https://github.com/Anty-Anty/WaterPleaseApp",
       backRepo: "https://github.com/Anty-Anty/WaterPleaseApp-backend",
@@ -27,6 +28,7 @@ const MainPage = () => {
       description:
         "A full-stack web application for managing personal tasks, featuring user authentication, protected routes, and persistent data storage.",
       img: "ToDoApp",
+      imgSmall: "ToDoApp_small",
       appLink: "https://todoappoo.netlify.app/",
       frontRepo: "https://github.com/Anty-Anty/ToDoApp",
       backRepo: "https://github.com/Anty-Anty/ToDoApp-backend",
@@ -190,7 +192,6 @@ const MainPage = () => {
                     </a>
 
                     <button className="button-app">More info</button>
-
                   </div>
                 </div>
                 <div className="section-light app-gallery-inner-discription">
@@ -199,14 +200,22 @@ const MainPage = () => {
               </div>
               <div className="app-gallery-inner-block2">
                 <div className="app-gallery-inner-image">
-                  <img
-                    src={`${import.meta.env.BASE_URL}screenshots/${app.img
+                  <picture>
+                    {app.imgSmall && (
+                      <source
+                        srcSet={`${import.meta.env.BASE_URL}screenshots/${
+                          app.imgSmall
+                        }.webp`}
+                        media="(max-width: 1100px)"
+                      />
+                    )}
+                    <img
+                      src={`${import.meta.env.BASE_URL}screenshots/${
+                        app.img
                       }.webp`}
-                    alt={app.img}
-                  // loading="lazy"
-                  // onClick={() => setModalImage(work.title)}
-                  // className="app-gallery-img"
-                  />
+                      alt={app.img}
+                    />
+                  </picture>
                 </div>
                 <div className="section-light app-gallery-inner-frontend">
                   <p>
