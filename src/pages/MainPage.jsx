@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 
+import apps from "../data/apps";
 import Modal from "../components/Modal";
 import LoadingSpinner from "../components/LoadingSpinner";
 
@@ -8,70 +9,6 @@ import "./MainPage.css";
 const MainPage = () => {
   //WORKS//
   const [showAllApps, setShowAllApps] = useState(false);
-
-  const apps = [
-    {
-      id: "1",
-      title: "WaterPleaseApp",
-      frontend: "React + TypeScript",
-      backend: "Node.js + Express + MongoDB",
-      description:
-        "A full-stack web application for managing indoor plants, visualizing their placement on a grid map, and tracking watering schedules.",
-      img: "WaterPleaseApp",
-      imgSmall: "WaterPleaseApp_small",
-      appLink: "https://waterpleaseapp.netlify.app",
-      frontRepo: "https://github.com/Anty-Anty/WaterPleaseApp",
-      backRepo: "https://github.com/Anty-Anty/WaterPleaseApp-backend",
-    },
-    {
-      id: "2",
-      title: "ToDoApp",
-      frontend: "React",
-      backend: "Node.js + Express + MongoDB",
-      description:
-        "A full-stack web application for managing personal tasks, featuring user authentication, protected routes, and persistent data storage.",
-      img: "ToDoApp",
-      imgSmall: "ToDoApp_small",
-      appLink: "https://todoappoo.netlify.app/",
-      frontRepo: "https://github.com/Anty-Anty/ToDoApp",
-      backRepo: "https://github.com/Anty-Anty/ToDoApp-backend",
-    },
-    {
-      id: "3",
-      title: "Delmaket",
-      frontend: "React",
-      backend: "",
-      description:
-        "A clean, minimal portfolio website built for an architectural model studio.",
-      img: "Delmaket",
-      appLink: "https://anty-anty.github.io/delmaket/#/en",
-      frontRepo: "https://github.com/Anty-Anty/delmaket",
-    },
-    {
-      id: "4",
-      title: "app4",
-      frontend: "frontend",
-      backend: "backend",
-      description: "app",
-      img: "image",
-    },
-    {
-      id: "5",
-      title: "app5",
-      frontend: "frontend",
-      backend: "backend",
-      description: "app",
-      img: "image",
-    },
-    {
-      id: "6",
-      title: "app6",
-      frontend: "frontend",
-      backend: "backend",
-      description: "app",
-      img: "image",
-    },
-  ];
 
   //MODAL//
   const [modalImage, setModalImage] = useState(false);
@@ -312,8 +249,38 @@ const MainPage = () => {
 
       {/* EDUCATION */}
       <div className="section education">
-        {/* <div className="line_green"></div> */}
-        {/* <hr className="line_green" /> */}
+        <h3>
+          <span className="white">Education & Training</span>
+        </h3>
+        <br />
+        <h4>Self-directed Web Development Study (4+ years)</h4>
+        <h4>Completed full courses while building real applications:</h4>
+        <p>
+          • The Complete Full-Stack Web Development Bootcamp — Dr. Angela Yu{" "}
+          <br />
+          • The Web Developer Bootcamp — Colt Steele
+          <br />
+          • The Ultimate React Course: React, Next.js, Redux & More — Jonas
+          Schmedtmann
+          <br />
+          • React, NodeJS, Express & MongoDB: The MERN Fullstack Guide —
+          Maximilian Schwarzmüller <br />• React & TypeScript: The Practical
+          Guide — Maximilian Schwarzmüller <br />• React and Typescript: Build a
+          Portfolio Project — Stephen Grider
+        </p>
+        <br />
+        <h3>
+          <span className="white">Previous Career</span>
+        </h3>
+        <br />
+        <h4>Architect / Architectural designer (9+ years)</h4>
+        <p>
+          • Worked in award-winning international architecture studios. <br />•
+          Developed strong design sense, client communication skills, and
+          expertise in complex project coordination — all of which translate
+          directly into UI/UX thinking, structured problem solving, and
+          collaborative engineering workflows.
+        </p>
       </div>
 
       {/* MODAL */}
@@ -340,6 +307,13 @@ const MainPage = () => {
                 }screenshots/gallery/${imgName}.webp`}
                 alt={imgName}
                 loading="lazy"
+                // If the image is less than 1000px wide,
+                // its max-width is set to 500px.
+                onLoad={(e) => {
+                  if (e.target.naturalWidth < 1000) {
+                    e.target.classList.add("img-small");
+                  }
+                }}
               />
             ))}
           </div>

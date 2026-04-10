@@ -181,7 +181,7 @@
 /* Education section */
 .education {
   padding: 10px;
-  height: 130px;
+  height: auto;
 }
 
 .line_red {
@@ -198,6 +198,22 @@
 
 .line_blue {
   background-color: #2a6ef5;
+}
+
+/* MODAL */
+.modal-works {
+  width: 100%;
+  max-width: 900px;
+  margin: 2rem;
+}
+
+.modal-works img {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.modal-works img.img-small {
+  max-width: 500px;
 }
 
 .modal-close-btn {
