@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 
+import Modal from "../components/Modal";
+import LoadingSpinner from "../components/LoadingSpinner";
+
 import "./MainPage.css";
 
 const MainPage = () => {
@@ -70,14 +73,53 @@ const MainPage = () => {
     },
   ];
 
+  //MODAL//
+  const [modalImage, setModalImage] = useState(false);
+  const [images, setImages] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const closeModalHandler = () => {
+    setModalImage(false);
+    setImages([]);
+    setIsLoading(false); // stop spinner
+  };
+
+  useEffect(() => {
+    if (!modalImage) return;
+
+    const found = [];
+    let i = 1;
+    setIsLoading(true); // start spinner
+
+    const checkNext = () => {
+      const testImg = new Image();
+      testImg.src = `${
+        import.meta.env.BASE_URL
+      }screenshots/gallery/${modalImage}_${i}.webp`;
+
+      testImg.onload = () => {
+        found.push(`${modalImage}_${i}`);
+        i++;
+        checkNext(); // keep checking next file
+      };
+
+      testImg.onerror = () => {
+        setImages(found); // stop when file missing
+        setIsLoading(false); // stop spinner
+      };
+    };
+
+    checkNext();
+  }, [modalImage]);
+
   return (
-    <div class="wrapper">
+    <div className="wrapper">
       {/* HEADER */}
-      <div class="section header">
+      <div className="section header">
         {/* <div className="line_red"></div> */}
         {/* <hr className="line_red" /> */}
-        <div class="row">
-          <div class="col col-left">
+        <div className="row">
+          <div className="col col-left">
             <h3>
               <span className="white">Hi, I'm Voo</span>
             </h3>
@@ -86,7 +128,7 @@ const MainPage = () => {
               <br />I love building full-stack apps in React.
             </p>
           </div>
-          <div class="col col-right">
+          <div className="col col-right">
             <h3>
               <span className="white">Contacts</span>
             </h3>
@@ -99,7 +141,9 @@ const MainPage = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <button className="button-contacts">GitHub link</button>
+              <button type="button" className="button-contacts">
+                GitHub link
+              </button>
             </a>
             <br />
             <a
@@ -107,14 +151,16 @@ const MainPage = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <button className="button-contacts">LinkedIn link</button>
+              <button type="button" className="button-contacts">
+                LinkedIn link
+              </button>
             </a>
           </div>
         </div>
       </div>
 
       {/* TECH STACK */}
-      <div class="section tech-stack">
+      <div className="section tech-stack">
         {/* <div className="line_yellow"></div> */}
         {/* <hr className="line_yellow" /> */}
         <h3>
@@ -167,18 +213,14 @@ const MainPage = () => {
       </div>
 
       {/* GALLERY */}
-      <div class="section app-gallery">
+      <div className="section app-gallery">
         {/* <div className="line_blue"></div> */}
         {/* <hr className="line_blue" /> */}
         <h3>Apps</h3>
 
-        <div class="app-gallery-stack">
+        <div className="app-gallery-stack">
           {(showAllApps ? apps : apps.slice(0, 3)).map((app) => (
-            <div
-              key={app.id}
-              class="app-gallery-inner"
-              onClick={() => setModalImage(app.title)}
-            >
+            <div key={app.id} className="app-gallery-inner">
               <div className="app-gallery-inner-block1">
                 <div className="section-light app-gallery-inner-title">
                   <div>
@@ -188,10 +230,18 @@ const MainPage = () => {
                   </div>
                   <div>
                     <a href={app.appLink} target="_blank" rel="noreferrer">
-                      <button className="button-app">View App</button>
+                      <button type="button" className="button-app">
+                        View App
+                      </button>
                     </a>
 
-                    <button className="button-app">More info</button>
+                    <button
+                      type="button"
+                      className="button-app"
+                      onClick={() => setModalImage(app.title)}
+                    >
+                      More info
+                    </button>
                   </div>
                 </div>
                 <div className="section-light app-gallery-inner-discription">
@@ -223,7 +273,9 @@ const MainPage = () => {
                     <br /> {app.frontend}
                   </p>
                   <a href={app.frontRepo} target="_blank" rel="noreferrer">
-                    <button className="button-app">View repo</button>
+                    <button type="button" className="button-app">
+                      View repo
+                    </button>
                   </a>
                 </div>
                 <div className="section-light app-gallery-inner-backend">
@@ -234,7 +286,9 @@ const MainPage = () => {
                         {app.backend}
                       </p>
                       <a href={app.backRepo} target="_blank" rel="noreferrer">
-                        <button className="button-app">View repo</button>
+                        <button type="button" className="button-app">
+                          View repo
+                        </button>
                       </a>
                     </>
                   ) : null}
@@ -245,6 +299,7 @@ const MainPage = () => {
         </div>
 
         <button
+          type="button"
           onClick={() => {
             setShowAllApps((prev) => {
               return !prev;
@@ -256,10 +311,40 @@ const MainPage = () => {
       </div>
 
       {/* EDUCATION */}
-      <div class="section education">
+      <div className="section education">
         {/* <div className="line_green"></div> */}
         {/* <hr className="line_green" /> */}
       </div>
+
+      {/* MODAL */}
+      {modalImage && (
+        <button
+          type="button"
+          className="modal-close-btn"
+          onClick={closeModalHandler}
+        >
+          ✖
+        </button>
+      )}
+
+      <Modal show={modalImage} onCancel={closeModalHandler}>
+        {isLoading ? (
+          <LoadingSpinner asOverlay />
+        ) : (
+          <div className="modal-works">
+            {images.map((imgName) => (
+              <img
+                key={imgName}
+                src={`${
+                  import.meta.env.BASE_URL
+                }screenshots/gallery/${imgName}.webp`}
+                alt={imgName}
+                loading="lazy"
+              />
+            ))}
+          </div>
+        )}
+      </Modal>
     </div>
   );
 };
