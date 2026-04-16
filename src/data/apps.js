@@ -38,11 +38,14 @@ const apps = [
   },
   {
     id: "4",
-    title: "more apps are comming",
-    frontend: "",
+    title: "CourseGoalsApp",
+    frontend: "React + TypeScript",
     backend: "",
-    description: "more apps are comming",
-    img: "image",
+    description:
+      "A small React + TypeScript application for creating, listing, and deleting personal course goals.",
+    img: "CourseGoalsApp",
+    appLink: "https://tsgoals.netlify.app/",
+    frontRepo: "https://github.com/Anty-Anty/TS-goals",
   },
 ];
 
