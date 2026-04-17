@@ -87,6 +87,11 @@
   width: 100%;
 }
 
+.b-highlight {
+  background-color: #313131;
+  border-color: #474747;
+}
+
 .button-app:hover {
   background-color: #636363;
 }
@@ -202,13 +207,29 @@
 }
 
 /* MODAL */
+
 .modal-works {
   width: 100%;
   max-width: 900px;
   margin: 2rem;
 }
 
-.modal-works img {
+.modal-details {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.margin10 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.modal-img {
+  padding-top: 50px;
+}
+
+.modal-img img {
   width: 100%;
   margin-bottom: 1rem;
 }

@@ -16,13 +16,15 @@ const MainPage = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const closeModalHandler = () => {
-    setModalImage(false);
+    setModalImage(null);
     setImages([]);
     setIsLoading(false); // stop spinner
   };
 
+  const modalApp = apps.find((a) => a.title === modalImage);
+
   useEffect(() => {
-    if (!modalImage) return;
+    if (!modalApp) return;
 
     const found = [];
     let i = 1;
@@ -167,14 +169,14 @@ const MainPage = () => {
                   </div>
                   <div>
                     <a href={app.appLink} target="_blank" rel="noreferrer">
-                      <button type="button" className="button-app">
+                      <button type="button" className="button-app b-highlight">
                         View App
                       </button>
                     </a>
 
                     <button
                       type="button"
-                      className="button-app"
+                      className="button-app b-highlight"
                       onClick={() => setModalImage(app.title)}
                     >
                       More info
@@ -216,7 +218,7 @@ const MainPage = () => {
                   </a>
                 </div>
                 <div className="section-light app-gallery-inner-backend">
-                  {app.backend ? (
+                  {app.backend && (
                     <>
                       <p>
                         Backend: <br />
@@ -228,7 +230,7 @@ const MainPage = () => {
                         </button>
                       </a>
                     </>
-                  ) : null}
+                  )}
                 </div>
               </div>
             </div>
@@ -299,23 +301,95 @@ const MainPage = () => {
           <LoadingSpinner asOverlay />
         ) : (
           <div className="modal-works">
-            {images.map((imgName) => (
-              <img
-                key={imgName}
-                src={`${
-                  import.meta.env.BASE_URL
-                }screenshots/gallery/${imgName}.webp`}
-                alt={imgName}
-                loading="lazy"
-                // If the image is less than 1000px wide,
-                // its max-width is set to 500px.
-                onLoad={(e) => {
-                  if (e.target.naturalWidth < 1000) {
-                    e.target.classList.add("img-small");
-                  }
-                }}
-              />
-            ))}
+            {/* APP DETAILS */}
+            <div className="modal-details">
+              <h2>{modalApp?.title}</h2>
+
+              {modalApp?.details?.map((section, i) => (
+                <div key={i} className="modal-section">
+                  {section.title && (
+                    <h3 className="margin10">
+                      <span className="white">{section.title}</span>
+                    </h3>
+                  )}
+
+                  {section.text && <p className="margin10">{section.text}</p>}
+
+                  {section.frontRepo && (
+                    <div className="margin10">
+                      <p>Frontend repository:</p>
+                      <a
+                        href={modalApp.frontRepo}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {modalApp.frontRepo}
+                      </a>
+                    </div>
+                  )}
+
+                  {section.backRepo && (
+                    <div className="margin10">
+                      <p>Backend repository:</p>
+                      <a
+                        href={modalApp.backRepo}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {modalApp.backRepo}
+                      </a>
+                    </div>
+                  )}
+
+                  {section.appLink && (
+                    <div className="margin10">
+                      <a
+                        href={modalApp.appLink}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {modalApp.appLink}
+                      </a>
+                      <p className="margin10">
+                        ⚠️ Cold start notice The backend is hosted on Render’s
+                        free tier. Initial load may take up to ~60 seconds due
+                        to server cold start
+                      </p>
+                    </div>
+                  )}
+
+                  {section.items && (
+                    <ul>
+                      {section.items.map((item, j) => (
+                        <li key={j}>{item}</li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+
+            {/* APP IMAGE GALLARY */}
+            <div className="modal-img">
+              <h3 className="margin10">Screenshots</h3>
+              {images.map((imgName) => (
+                <img
+                  key={imgName}
+                  src={`${
+                    import.meta.env.BASE_URL
+                  }screenshots/gallery/${imgName}.webp`}
+                  alt={imgName}
+                  loading="lazy"
+                  // If the image is less than 1000px wide,
+                  // its max-width is set to 500px.
+                  onLoad={(e) => {
+                    if (e.target.naturalWidth < 1000) {
+                      e.target.classList.add("img-small");
+                    }
+                  }}
+                />
+              ))}
+            </div>
           </div>
         )}
       </Modal>

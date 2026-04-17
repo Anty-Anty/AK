@@ -11,6 +11,38 @@ const apps = [
     appLink: "https://waterpleaseapp.netlify.app",
     frontRepo: "https://github.com/Anty-Anty/WaterPleaseApp",
     backRepo: "https://github.com/Anty-Anty/WaterPleaseApp-backend",
+    details: [
+      {
+        title: "",
+        text: "A full-stack web application for managing indoor plants, visualizing their placement on a grid map, and tracking watering schedules.",
+        frontRepo: true,
+        backRepo: true,
+      },
+      {
+        title: "Live demo",
+        appLink: true,
+      },
+      {
+        title: "Tech Stack",
+        items: [
+          "React (Vite)",
+          "TypeScript",
+          "Node.js",
+          "Express",
+          "MongoDB (Mongoose)",
+          "REST API",
+          "CSS Modules / Custom CSS",
+          "Custom Hooks: useHttpClient, useForm",
+          "Drag & Drop (custom implementation)",
+          "express-validator",
+          "MongoDB Transactions (Sessions)",
+        ],
+      },
+      {
+        title: "Why I Built This",
+        text: "To practice full-stack React patterns, TypeScript, custom hooks, state synchronization with a backend, and real-world UI edge cases such as drag & drop and mobile date picker inconsistencies.",
+      },
+    ],
   },
   {
     id: "2",
