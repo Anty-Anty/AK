@@ -269,6 +269,65 @@
   /* still shows outline when using keyboard navigation */
 }
 
+/* API end points tables */
+.endpoint-title {
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.endpoint-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  margin-bottom: 8px;
+}
+
+.endpoint-table th,
+.endpoint-table td {
+  border: 1px solid #333;
+  padding: 7px 12px;
+  text-align: left;
+}
+
+.endpoint-table thead tr {
+  background-color: #1e1e1e;
+}
+
+.endpoint-table tbody tr:nth-child(odd) {
+  background-color: #161616;
+}
+
+.endpoint-table code {
+  background-color: #2a2a2a;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  color: #a8d8a8;
+}
+
+.endpoint-group {
+  margin-bottom: 20px;
+}
+
+/* Optional: color-code HTTP methods */
+.method {
+  font-weight: bold;
+}
+/* .method-get {
+  color: #6bbd6b;
+}
+.method-post {
+  color: #6ab0f5;
+}
+.method-patch {
+  color: #f0a04b;
+}
+.method-delete {
+  color: #e06c75;
+} */
+
+/* mobile */
+
 @media (max-width: 950px) {
   .app-gallery-inner {
     flex-direction: column;

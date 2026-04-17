@@ -314,6 +314,9 @@ const MainPage = () => {
                   )}
 
                   {section.text && <p className="margin10">{section.text}</p>}
+                  {section.status && (
+                    <p className="margin10">{section.status}</p>
+                  )}
 
                   {section.frontRepo && (
                     <div className="margin10">
@@ -350,12 +353,11 @@ const MainPage = () => {
                       >
                         {modalApp.appLink}
                       </a>
-                      <p className="margin10">
-                        ⚠️ Cold start notice The backend is hosted on Render’s
-                        free tier. Initial load may take up to ~60 seconds due
-                        to server cold start
-                      </p>
                     </div>
+                  )}
+
+                  {section.coldStart && (
+                    <p className="margin10">{section.coldStart}</p>
                   )}
 
                   {section.items && (
@@ -364,6 +366,50 @@ const MainPage = () => {
                         <li key={j}>{item}</li>
                       ))}
                     </ul>
+                  )}
+
+                  {section.keyDec && (
+                    <ul>
+                      {section.keyDec.map((item, j) => (
+                        <li key={j}>{item}</li>
+                      ))}
+                    </ul>
+                  )}
+
+                  {section.endpoints && (
+                    <div className="margin10">
+                      {section.endpoints.map((group, k) => (
+                        <div key={k} className="endpoint-group">
+                          {group.title && (
+                            <p className="endpoint-title">{group.title}</p>
+                          )}
+                          <table className="endpoint-table">
+                            <thead>
+                              <tr>
+                                <th>Method</th>
+                                <th>Endpoint</th>
+                                <th>Description</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              {group.rows.map((row, j) => (
+                                <tr key={j}>
+                                  <td
+                                    className={`method method-${row.method.toLowerCase()}`}
+                                  >
+                                    {row.method}
+                                  </td>
+                                  <td>
+                                    <code>{row.endpoint}</code>
+                                  </td>
+                                  <td>{row.description}</td>
+                                </tr>
+                              ))}
+                            </tbody>
+                          </table>
+                        </div>
+                      ))}
+                    </div>
                   )}
                 </div>
               ))}
