@@ -4,6 +4,8 @@
   padding: 0;
 }
 
+
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -25,22 +27,6 @@
   border: 1px dashed #333333;
   border-radius: 10px;
   /* padding: 10px; */
-}
-
-.white {
-  color: #ffffffe5;
-}
-.red {
-  color: #e8476a;
-}
-.yellow {
-  color: #f5e12a;
-}
-.green {
-  color: #3fc42ac7;
-}
-.blue {
-  color: #2a6ef5;
 }
 
 /* Header section */
@@ -92,6 +78,10 @@
   border-color: #474747;
 }
 
+.button-contacts:hover {
+  background-color: #636363;
+}
+
 .button-app:hover {
   background-color: #636363;
 }
@@ -103,7 +93,7 @@
 }
 
 .tech-stack p {
-  line-height: 1.5;
+  line-height: 1.7;
 }
 
 /* App gallery section */
@@ -325,6 +315,45 @@
 .method-delete {
   color: #e06c75;
 } */
+
+.white {
+  color: #ffffffe5;
+}
+/* .red {
+  color: #e8476a;
+}
+.yellow {
+  color: #f5e12a;
+}
+.green {
+  color: #3fc42ac7;
+}
+.blue {
+  color: #2a6ef5;
+} */
+
+.green {
+  color: #6bbd6b;
+}
+.blue {
+  color: #6ab0f5;
+}
+.orange {
+  color: #f0a04b;
+}
+.red {
+  color: #e06c75;
+}
+
+.chip {
+  padding: 0px 12px;
+  padding-bottom: 3px;
+  border-radius: 999px;
+  border: 1px solid #555;
+  font-size: 1rem;
+  color: #ccc;
+  background-color: #2a2a2a;
+}
 
 /* mobile */
 

@@ -59,28 +59,28 @@ const MainPage = () => {
         {/* <hr className="line_red" /> */}
         <div className="row">
           <div className="col col-left">
-            <h3>
-              <span className="white">Hi, I'm Voo</span>
-            </h3>
+            <h2>
+              <span className="orange">Hi, I'm Anton</span>
+            </h2>
             <p>
-              Frontend Engineer with background in ....
+              Frontend Engineer with background in architecture.
               <br />I love building full-stack apps in React.
             </p>
           </div>
           <div className="col col-right">
             <h3>
-              <span className="white">Contacts</span>
+              <span className="blue">Contacts</span>
             </h3>
-            +1 xxx xxx xx xx
+            +1 236 979 41 21
             <br />
-            xxxxx.xxx@gmail.com
+            anton.cxa@gmail.com
             <br />
             <a
               href="https://github.com/Anty-Anty"
               target="_blank"
               rel="noreferrer"
             >
-              <button type="button" className="button-contacts">
+              <button type="button" className="button-contacts orange">
                 GitHub link
               </button>
             </a>
@@ -90,7 +90,7 @@ const MainPage = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <button type="button" className="button-contacts">
+              <button type="button" className="button-contacts orange">
                 LinkedIn link
               </button>
             </a>
@@ -103,40 +103,40 @@ const MainPage = () => {
         {/* <div className="line_yellow"></div> */}
         {/* <hr className="line_yellow" /> */}
         <h3>
-          <span className="white">Technical Skills</span>
+          <span className="blue">Technical Skills</span>
         </h3>
         <p>
           Languages & Tools:
           <br />
           <strong>
             <span className="white">
-              JavaScript (ES6+), TypeScript, HTML5, CSS3
+              <span className="white chip">JavaScript (ES6+)</span> <span className="white chip">TypeScript</span> <span className="white chip">HTML5</span> <span className="white chip">CSS3</span>
             </span>
           </strong>
           <br />
           Frameworks / Libraries:
           <br />
           <strong>
-            <span className="white">React, React Router, Vite </span>
+            <span className="white chip">React</span> <span className="white chip">React Router</span> <span className="white chip">Vite</span>
           </strong>
           <br />
           State Management:
           <br />
           <strong>
-            <span className="white">React Hooks, Context API</span>
+            <span className="white chip">React Hooks</span> <span className="white chip">Context API</span>
           </strong>
           <br />
           Backend Exposure:
           <br />
           <strong>
-            <span className="white">REST APIs, Node.js/Express, MongoDB</span>
+            <span className="white chip">REST APIs</span> <span className="white chip">Node.js/Express</span> <span className="white chip">MongoDB</span>
           </strong>
           <br />
           UI Patterns:
           <br />
           <strong>
-            <span className="white">
-              Component composition, forms, modals, drag & drop, dynamic state
+            <span className="white chip">
+              Component composition</span> <span className="white chip">forms</span> <span className="white chip">modals</span> <span className="white chip">drag & drop</span> <span className="white chip">dynamic state
               syncing
             </span>
           </strong>
@@ -145,7 +145,7 @@ const MainPage = () => {
           <br />
           <strong>
             <span className="white">
-              Git/GitHub, responsive design, performance optimization
+              <span className="white chip">Git/GitHub</span> <span className="white chip">responsive design</span> <span className="white chip">performance optimization</span>
             </span>
           </strong>
         </p>
@@ -155,7 +155,7 @@ const MainPage = () => {
       <div className="section app-gallery">
         {/* <div className="line_blue"></div> */}
         {/* <hr className="line_blue" /> */}
-        <h3>Apps</h3>
+        <h3 className="blue">Apps</h3>
 
         <div className="app-gallery-stack">
           {(showAllApps ? apps : apps.slice(0, 3)).map((app) => (
@@ -164,19 +164,19 @@ const MainPage = () => {
                 <div className="section-light app-gallery-inner-title">
                   <div>
                     <h4>
-                      <span className="white">{app.title}</span>
+                      <span className="orange">{app.title}</span>
                     </h4>
                   </div>
                   <div>
                     <a href={app.appLink} target="_blank" rel="noreferrer">
-                      <button type="button" className="button-app b-highlight">
+                      <button type="button" className="button-app b-highlight orange">
                         View App
                       </button>
                     </a>
 
                     <button
                       type="button"
-                      className="button-app b-highlight"
+                      className="button-app"
                       onClick={() => setModalImage(app.title)}
                     >
                       More info
@@ -252,7 +252,7 @@ const MainPage = () => {
       {/* EDUCATION */}
       <div className="section education">
         <h3>
-          <span className="white">Education & Training</span>
+          <span className="blue">Education & Training</span>
         </h3>
         <br />
         <h4>Self-directed Web Development Study (4+ years)</h4>
@@ -272,7 +272,7 @@ const MainPage = () => {
         </p>
         <br />
         <h3>
-          <span className="white">Previous Career</span>
+          <span className="blue">Previous Career</span>
         </h3>
         <br />
         <h4>Architect / Architectural designer (9+ years)</h4>

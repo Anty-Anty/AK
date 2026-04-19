@@ -302,6 +302,7 @@ const apps = [
     description:
       "A small React + TypeScript application for creating, listing, and deleting personal course goals.",
     img: "CourseGoalsApp",
+      imgSmall: "CourseGoalsApp_small",
     appLink: "https://tsgoals.netlify.app/",
     frontRepo: "https://github.com/Anty-Anty/TS-goals",
     details: [
