@@ -418,7 +418,9 @@ const MainPage = () => {
             {/* APP IMAGE GALLARY */}
             <div className="modal-img">
               <h3 className="margin10">Screenshots</h3>
-              {images.map((imgName) => (
+              {images.map((imgName, i) => (
+                <figure key={imgName}>
+                <figcaption>{modalApp?.screenshots?.[i]}</figcaption>
                 <img
                   key={imgName}
                   src={`${
@@ -434,6 +436,7 @@ const MainPage = () => {
                     }
                   }}
                 />
+                </figure>
               ))}
             </div>
           </div>

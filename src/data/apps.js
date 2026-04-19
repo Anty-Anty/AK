@@ -2,6 +2,12 @@ const apps = [
   {
     id: "1",
     title: "WaterPleaseApp",
+    screenshots: [
+      "Main Dashboard",
+      "Add Plant Workflow",
+      "Interactive Map Editor",
+      "Mobile View",
+    ],
     frontend: "React + TypeScript",
     backend: "Node.js + Express + MongoDB",
     description:
@@ -110,6 +116,14 @@ const apps = [
   },
   {
     id: "2",
+    screenshots: [
+      "Welcome / Landing page",
+      "Authentication page",
+      "To-Do list",
+      "Add Item form",
+      "Edit modal",
+      "Mobile View / User settings",
+    ],
     title: "ToDoApp",
     frontend: "React",
     backend: "Node.js + Express + MongoDB",
@@ -222,6 +236,12 @@ const apps = [
   },
   {
     id: "3",
+    screenshots: [
+      "Landing page",
+      "Portfolio Gallery",
+      "Image Viewer Modal",
+      "Mobile View",
+    ],
     title: "Delmaket",
     frontend: "React",
     backend: "",
