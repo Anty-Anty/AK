@@ -4,8 +4,6 @@
   padding: 0;
 }
 
-
-
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -270,12 +268,14 @@
   border-collapse: collapse;
   font-size: 0.875rem;
   margin-bottom: 8px;
+  table-layout: fixed;
+  word-break: break-word;
 }
 
 .endpoint-table th,
 .endpoint-table td {
   border: 1px solid #333;
-  padding: 7px 12px;
+  padding: 7px 11px;
   text-align: left;
 }
 
