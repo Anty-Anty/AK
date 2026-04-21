@@ -28,8 +28,7 @@ const apps = [
       {
         title: "Live demo",
         appLink: true,
-        coldStart:
-          "⚠️ Cold start notice The backend is hosted on Render’s free tier. Initial load may take up to ~60 seconds due to server cold start.",
+        coldStart: "",
       },
       {
         title: "Tech Stack",
@@ -145,8 +144,7 @@ const apps = [
       {
         title: "Live demo",
         appLink: true,
-        coldStart:
-          "⚠️ Cold start notice The backend is hosted on Render’s free tier. Initial load may take up to ~60 seconds due to server cold start.",
+        coldStart: "",
       },
       {
         title: "Demo Login & Authentication",
@@ -302,7 +300,7 @@ const apps = [
     description:
       "A small React + TypeScript application for creating, listing, and deleting personal course goals.",
     img: "CourseGoalsApp",
-      imgSmall: "CourseGoalsApp_small",
+    imgSmall: "CourseGoalsApp_small",
     appLink: "https://tsgoals.netlify.app/",
     frontRepo: "https://github.com/Anty-Anty/TS-goals",
     details: [
