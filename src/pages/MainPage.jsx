@@ -32,9 +32,8 @@ const MainPage = () => {
 
     const checkNext = () => {
       const testImg = new Image();
-      testImg.src = `${
-        import.meta.env.BASE_URL
-      }screenshots/gallery/${modalImage}_${i}.webp`;
+      testImg.src = `${import.meta.env.BASE_URL
+        }screenshots/gallery/${modalImage}_${i}.webp`;
 
       testImg.onload = () => {
         found.push(`${modalImage}_${i}`);
@@ -63,8 +62,9 @@ const MainPage = () => {
               <span className="orange">Hi, I'm Anton</span>
             </h2>
             <p>
-              Frontend Engineer with background in architecture.
-              <br />I love building full-stack apps in React.
+              Software Developer with background in architecture.
+              <br />I love building full-stack in React.<br/>
+              Based in Canada, Vancouver
             </p>
           </div>
           <div className="col col-right">
@@ -137,7 +137,7 @@ const MainPage = () => {
           <strong>
             <span className="white chip">
               Component composition</span> <span className="white chip">forms</span> <span className="white chip">modals</span> <span className="white chip">drag & drop</span> <span className="white chip">dynamic state
-              syncing
+                syncing
             </span>
           </strong>
           <br />
@@ -192,16 +192,14 @@ const MainPage = () => {
                   <picture>
                     {app.imgSmall && (
                       <source
-                        srcSet={`${import.meta.env.BASE_URL}screenshots/${
-                          app.imgSmall
-                        }.webp`}
+                        srcSet={`${import.meta.env.BASE_URL}screenshots/${app.imgSmall
+                          }.webp`}
                         media="(max-width: 1100px)"
                       />
                     )}
                     <img
-                      src={`${import.meta.env.BASE_URL}screenshots/${
-                        app.img
-                      }.webp`}
+                      src={`${import.meta.env.BASE_URL}screenshots/${app.img
+                        }.webp`}
                       alt={app.img}
                     />
                   </picture>
@@ -255,7 +253,7 @@ const MainPage = () => {
           <span className="blue">Education & Training</span>
         </h3>
         <br />
-        <h4>Self-directed Web Development Study (4+ years)</h4>
+        <h4>Self-directed education (5 years)</h4>
         <h4>Completed full courses while building real applications:</h4>
         <p>
           • The Complete Full-Stack Web Development Bootcamp — Dr. Angela Yu{" "}
@@ -276,6 +274,8 @@ const MainPage = () => {
         </h3>
         <br />
         <h4>Architect / Architectural designer (9+ years)</h4>
+        <h4>Politecnico di Milano — Master of Architecture, <em>cum laude</em></h4>
+        <h4>Moscow Architectural Institute — Bachelor's & Specialist Degrees</h4>
         <p>
           • Worked in award-winning international architecture studios. <br />•
           Developed strong design sense, client communication skills, and
@@ -420,22 +420,21 @@ const MainPage = () => {
               <h3 className="margin10">Screenshots</h3>
               {images.map((imgName, i) => (
                 <figure key={imgName}>
-                <figcaption>{modalApp?.screenshots?.[i]}</figcaption>
-                <img
-                  key={imgName}
-                  src={`${
-                    import.meta.env.BASE_URL
-                  }screenshots/gallery/${imgName}.webp`}
-                  alt={imgName}
-                  loading="lazy"
-                  // If the image is less than 1000px wide,
-                  // its max-width is set to 500px.
-                  onLoad={(e) => {
-                    if (e.target.naturalWidth < 1000) {
-                      e.target.classList.add("img-small");
-                    }
-                  }}
-                />
+                  <figcaption>{modalApp?.screenshots?.[i]}</figcaption>
+                  <img
+                    key={imgName}
+                    src={`${import.meta.env.BASE_URL
+                      }screenshots/gallery/${imgName}.webp`}
+                    alt={imgName}
+                    loading="lazy"
+                    // If the image is less than 1000px wide,
+                    // its max-width is set to 500px.
+                    onLoad={(e) => {
+                      if (e.target.naturalWidth < 1000) {
+                        e.target.classList.add("img-small");
+                      }
+                    }}
+                  />
                 </figure>
               ))}
             </div>
