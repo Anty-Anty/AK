@@ -273,7 +273,7 @@ const MainPage = () => {
           <span className="blue">Previous Career</span>
         </h3>
         <br />
-        <h4>Architect / Architectural designer (9+ years)</h4>
+        <h4>Architect / Architectural designer (10+ years)</h4>
         <h4>Politecnico di Milano — Master of Architecture, <em>cum laude</em></h4>
         <h4>Moscow Architectural Institute — Bachelor's & Specialist Degrees</h4>
         <p>
