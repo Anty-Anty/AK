@@ -141,6 +141,14 @@ const MainPage = () => {
             </span>
           </strong>
           <br />
+          AI-Assisted Development: 
+          <br />
+          <strong>
+            <span className="white chip">
+              Claude</span> <span className="white chip">ChatGPT</span> <span className="white chip">GitHub Copilot
+            </span>
+          </strong>
+          <br />
           Other:
           <br />
           <strong>
