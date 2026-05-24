@@ -99,6 +99,19 @@ const MainPage = () => {
       </div>
 
       {/* TECH STACK */}
+   <div className="section education">
+        <h3>
+          <span className="blue">Experience</span>
+        </h3>
+        <br />
+        <h4>Frontend Developer — Freelance · Nov 2022 – Present</h4>
+        <p>
+Developed and deployed full-stack React applications with Node.js/Express backends, MongoDB, and JWT auth; delivered client websites for design studios.
+        </p>
+        <br />
+      </div>
+
+      {/* TECH STACK */}
       <div className="section tech-stack">
         {/* <div className="line_yellow"></div> */}
         {/* <hr className="line_yellow" /> */}
@@ -129,8 +142,21 @@ const MainPage = () => {
           Backend Exposure:
           <br />
           <strong>
-            <span className="white chip">REST APIs</span> <span className="white chip">Node.js/Express</span> <span className="white chip">MongoDB</span>
+            <span className="white chip">REST APIs</span> <span className="white chip">Node.js/Express</span>
           </strong>
+          <br />
+          Databases: 
+          <br />
+          <strong>
+            <span className="white chip">MongoDB · Schema design for relational and document-based data models
+          </span>
+           </strong>
+          <br />
+          Deployment & Tooling: 
+          <br />
+          <strong>
+            <span className="white chip">Netlify, Railway, Render, npm</span>
+            </strong>
           <br />
           UI Patterns:
           <br />
@@ -278,7 +304,7 @@ const MainPage = () => {
         </p>
         <br />
         <h3>
-          <span className="blue">Previous Career</span>
+          <span className="blue">Previous Experience</span>
         </h3>
         <br />
         <h4>Architect / Architectural designer (10+ years)</h4>
