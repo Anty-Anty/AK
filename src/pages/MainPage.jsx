@@ -104,7 +104,7 @@ const MainPage = () => {
           <span className="blue">Experience</span>
         </h3>
         <br />
-        <h4>Frontend Developer — Freelance · Nov 2022 – Present</h4>
+        <h4>Frontend Developer — Contract & Independent Projects · Nov 2023 – Present</h4>
         <p>
 Developed and deployed full-stack React applications with Node.js/Express backends, MongoDB, and JWT auth; delivered client websites for design studios.
         </p>
@@ -139,7 +139,7 @@ Developed and deployed full-stack React applications with Node.js/Express backen
             <span className="white chip">React Hooks</span> <span className="white chip">Context API</span>
           </strong>
           <br />
-          Backend Exposure:
+          Backend:
           <br />
           <strong>
             <span className="white chip">REST APIs</span> <span className="white chip">Node.js/Express</span>
