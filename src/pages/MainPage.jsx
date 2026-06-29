@@ -63,7 +63,7 @@ const MainPage = () => {
             </h2>
             <p>
               Software Developer with background in architecture.
-              <br />I love building full-stack in React.<br/>
+              <br />I love building full-stack applications in React.<br />
               Based in Canada, Vancouver
             </p>
           </div>
@@ -98,15 +98,30 @@ const MainPage = () => {
         </div>
       </div>
 
-      {/* TECH STACK */}
-   <div className="section education">
+      {/* EXPERIENCE */}
+      <div className="section education">
         <h3>
           <span className="blue">Experience</span>
         </h3>
         <br />
-        <h4>Frontend Developer — Contract & Independent Projects · Nov 2023 – Present</h4>
+        <h4>Software Developer — Contract & Independent Projects · Nov 2023 – Present</h4>
         <p>
-Developed and deployed full-stack React applications with Node.js/Express backends, MongoDB, and JWT auth; delivered client websites for design studios.
+          Developed and deployed full-stack React applications with Node.js/Express backends, MongoDB, and JWT auth; delivered client websites for design studios.
+        </p>
+        <br />
+        <h3>
+          <span className="blue">Previous Experience</span>
+        </h3>
+        <br />
+        <h4>Architect / Architectural designer (10+ years)</h4>
+        <h4>Politecnico di Milano — Master of Architecture, <em>cum laude</em></h4>
+        <h4>Moscow Architectural Institute — Bachelor's & Specialist Degrees</h4>
+        <p>
+          • Worked in award-winning international architecture studios. <br />•
+          Developed strong design sense, client communication skills, and
+          expertise in complex project coordination — all of which translate
+          directly into UI/UX thinking, structured problem solving, and
+          collaborative engineering workflows.
         </p>
         <br />
       </div>
@@ -145,18 +160,18 @@ Developed and deployed full-stack React applications with Node.js/Express backen
             <span className="white chip">REST APIs</span> <span className="white chip">Node.js/Express</span>
           </strong>
           <br />
-          Databases: 
+          Databases:
           <br />
           <strong>
             <span className="white chip">MongoDB · Schema design for relational and document-based data models
-          </span>
-           </strong>
+            </span>
+          </strong>
           <br />
-          Deployment & Tooling: 
+          Deployment & Tooling:
           <br />
           <strong>
             <span className="white chip">Netlify, Railway, Render, npm</span>
-            </strong>
+          </strong>
           <br />
           UI Patterns:
           <br />
@@ -167,7 +182,7 @@ Developed and deployed full-stack React applications with Node.js/Express backen
             </span>
           </strong>
           <br />
-          AI-Assisted Development: 
+          AI-Assisted Development:
           <br />
           <strong>
             <span className="white chip">
@@ -288,7 +303,8 @@ Developed and deployed full-stack React applications with Node.js/Express backen
         </h3>
         <br />
         <h4>Self-directed education (5 years)</h4>
-        <h4>Completed full courses while building real applications:</h4>
+        <p>Equivalent to CS fundamentals via structured curriculum (React, MERN, TypeScript, REST APIs, system design)</p>
+        <h4><br />Completed full courses while building real applications:</h4>
         <p>
           • The Complete Full-Stack Web Development Bootcamp — Dr. Angela Yu{" "}
           <br />
@@ -303,20 +319,7 @@ Developed and deployed full-stack React applications with Node.js/Express backen
           Portfolio Project — Stephen Grider
         </p>
         <br />
-        <h3>
-          <span className="blue">Previous Experience</span>
-        </h3>
-        <br />
-        <h4>Architect / Architectural designer (10+ years)</h4>
-        <h4>Politecnico di Milano — Master of Architecture, <em>cum laude</em></h4>
-        <h4>Moscow Architectural Institute — Bachelor's & Specialist Degrees</h4>
-        <p>
-          • Worked in award-winning international architecture studios. <br />•
-          Developed strong design sense, client communication skills, and
-          expertise in complex project coordination — all of which translate
-          directly into UI/UX thinking, structured problem solving, and
-          collaborative engineering workflows.
-        </p>
+        
       </div>
 
       {/* MODAL */}
