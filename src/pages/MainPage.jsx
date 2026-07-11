@@ -94,6 +94,17 @@ const MainPage = () => {
                 LinkedIn link
               </button>
             </a>
+            <br />
+            <a
+              href={`${import.meta.env.BASE_URL}resume/Anton_Kotlyarov_Resume.pdf`}
+              download="Anton_Kotlyarov_Resume.pdf"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <button type="button" className="button-contacts orange">
+                Download Resume
+              </button>
+            </a>
           </div>
         </div>
       </div>
@@ -319,7 +330,7 @@ const MainPage = () => {
           Portfolio Project — Stephen Grider
         </p>
         <br />
-        
+
       </div>
 
       {/* MODAL */}

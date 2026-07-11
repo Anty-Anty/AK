@@ -246,7 +246,7 @@ const apps = [
     description:
       "A clean, minimal portfolio website built for an architectural model studio.",
     img: "Delmaket",
-    appLink: "https://anty-anty.github.io/delmaket/#/en",
+    appLink: "https://delmaket.ru/#/en",
     frontRepo: "https://github.com/Anty-Anty/delmaket",
     details: [
       {
