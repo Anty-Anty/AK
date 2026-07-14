@@ -63,7 +63,10 @@ const MainPage = () => {
             </h2>
             <p>
               Software Developer with background in architecture.
-              <br />I love building full-stack applications in React.<br />
+            </p>
+            <h4>Stack: React · TypeScript · Node.js · MongoDB · REST APIs</h4>
+            <p>
+              I love building full-stack applications in React.<br />
               Based in Canada, Vancouver
             </p>
           </div>
@@ -114,7 +117,6 @@ const MainPage = () => {
         <h3>
           <span className="blue">Experience</span>
         </h3>
-        <br />
         <h4>Software Developer — Contract & Independent Projects · Nov 2023 – Present</h4>
         <p>
           Developed and deployed full-stack React applications with Node.js/Express backends, MongoDB, and JWT auth; delivered client websites for design studios.
@@ -123,7 +125,6 @@ const MainPage = () => {
         <h3>
           <span className="blue">Previous Experience</span>
         </h3>
-        <br />
         <h4>Architect / Architectural designer (10+ years)</h4>
         <h4>Politecnico di Milano — Master of Architecture, <em>cum laude</em></h4>
         <h4>Moscow Architectural Institute — Bachelor's & Specialist Degrees</h4>
@@ -131,7 +132,7 @@ const MainPage = () => {
           • Worked in award-winning international architecture studios. <br />•
           Developed strong design sense, client communication skills, and
           expertise in complex project coordination — all of which translate
-          directly into UI/UX thinking, structured problem solving, and
+          directly into UI/UX thinking, structured problem solving, ands
           collaborative engineering workflows.
         </p>
         <br />
@@ -162,7 +163,7 @@ const MainPage = () => {
           State Management:
           <br />
           <strong>
-            <span className="white chip">React Hooks</span> <span className="white chip">Context API</span>
+            <span className="white chip">Redux Toolkit</span><span className="white chip">React Hooks</span> <span className="white chip">Context API</span>
           </strong>
           <br />
           Backend:
